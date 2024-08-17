@@ -1,0 +1,298 @@
+/*******************************************css reset*******************************************/
+* , *::before , *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+/*******************************************variables*******************************************/
+:root{
+    --color-primary: #FF5722;
+    --color-secondary-light: #FFA589;
+    --color-white: #ffffff;
+    --color-secondary-dark: #FF7A50;
+    --color-navbar:#F8F8F8;
+    --color-btn-driver:#0065dc;
+    --color-btn-driver-hover:#1974df;
+    --color-primary-hover:#ff6738;
+    --color-headings: #000;
+    --color-link:#545454;
+}
+
+/*******************************************html*******************************************/
+html{
+    font-size: 62.5%;
+}
+
+/*******************************************body*******************************************/
+body, button {
+    font-size: 1.4rem;
+    font-family: Byekan;
+    direction: rtl;
+    border-radius: 8px;
+    border: none;
+}
+
+/*******************************************headings*******************************************/
+h1,h2,h3,h4,h5,h6{
+    color: var(--color-headings);
+}
+h1{
+    font-size: 2.4rem;
+}
+h2{
+    font-size: 2.2rem;
+}
+h3{
+    font-size: 2rem;
+}
+
+/*******************************************buttons*******************************************/
+.btn{
+    height: 5.6rem;
+    width: 22.4rem;
+    color: var(--color-white);
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.btn--block{
+    width: 100%;
+}
+.btn--primary{
+    background-color: var(--color-primary);
+}
+.btn--primary:hover{
+    background-color: var(--color-primary-hover);
+}
+.btn--driver{
+    background-color: var(--color-btn-driver);
+}
+.btn--driver:hover{
+    background-color: var(--color-btn-driver-hover);
+}
+.btn--secondary-light{
+    background-color: var(--color-secondary-light);
+}
+.btn--secondary-dark{
+    background-color: var(--color-secondary-dark);
+}
+
+/*******************************************corporate*******************************************/
+.corporate{
+    display: grid;
+    justify-content: center;
+    gap: 0rem 10rem;
+    padding: 4rem 2rem;
+}
+.corporate__image{
+    margin-bottom: 2rem;
+
+}
+.corporate__image img{
+    width: 100%;
+    height: auto;
+    padding: 0 20px;
+
+}
+.corporate__description{
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+.corporate__title h2{
+    font-weight: 700;
+}
+.corporate__link {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 0;
+}
+.corporate__link a{
+    color: var(--color-primary);
+    
+}
+.corporate__link .left-arrow-orange{
+   background: url(../assets/images/ic-left-arrow-orange.svg) 50%;
+   width: 2.4rem;
+   height: 2.4rem;
+   margin-top: 0.4rem;
+
+}
+/*******************************************Badge*******************************************/
+.badge{
+    display: inline-block;
+    padding: 0.5rem 1.3rem;
+    border-radius: 3.2rem;
+    border: 2px solid #FF5722;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+.badge__colored{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.badge__white{
+    background-color: var(--color-white);
+    color:var(--color-primary);
+}
+
+/*******************************************plan*******************************************/
+.plan{
+    display: grid;
+    justify-content: center;
+    gap: 8rem 6rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 320px));
+    margin-top: 5rem;
+}
+.card{
+    border-radius: 2rem;
+    overflow: hidden;
+}
+.card__header--light{
+    background-color: var(--color-secondary-light);
+}
+.card__header--dark{
+    background-color: var(--color-secondary-dark);
+}
+.card__header{
+    color: var(--color-white);
+}
+.card__body, .card__header{
+    padding: 3rem 2.5rem;
+}
+.card__body{
+    background-color: #FFF6F2;
+}
+
+.card__body .btn{
+    margin-top: 10rem;
+}
+.list__item{
+    background: url(../assets/images/Tick-Square.svg);
+    background-position: right center;
+    background-repeat: no-repeat;
+    padding-right: 3rem;
+    font-size: 1.8rem;
+}
+.introduction{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.card__price , .card__title{
+    font-size: 1.8rem;
+}
+.card__price span{
+    font-size: 3rem;
+    margin-left: 0.5rem;
+}
+/*******************************************Navbar*******************************************/
+.main-header{
+    background: var(--color-navbar);
+}
+.main-header .nav-header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+    align-items: center;
+    border-bottom: solid 1px #ddd;
+}
+.nav__items{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+.nav__items li{
+    margin: 10px 15px;
+}
+.nav__item a{
+    color: var(--color-link);
+    font-size: 1.5rem;
+    display: block;
+}
+.nav__item > a:hover{
+    color: var(--color-primary);
+}
+.download-app{
+    display: none;
+}
+.download-app a{
+    background: var(--color-primary);
+    padding: 0.7rem 4rem;
+    border-radius: 0.8rem;
+    color: var(--color-white);
+    margin-right: 1.8rem;
+}
+
+/*******************************************responsive*******************************************/
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 1024px) {
+    h1{
+        font-size: 3.8rem;
+    }
+    h2{
+        font-size: 3.5rem;
+    }
+    h3{
+        font-size: 3rem;
+    }
+    body {
+        font-size: 1.8rem;
+
+    }
+    button {
+        font-size: 1.6rem;
+
+    }
+    /********************corporate********************/
+    .corporate{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .corporate__image{
+        width: 100%;
+        order: 2;
+        margin-bottom: 0;
+    }
+    .corporate__detail{
+        order: 1;
+    }
+    .corporate__image img{
+        width: 100%;
+    }
+    .corporate__link .left-arrow-orange{
+        margin-top: 0.9rem;
+     
+     }
+     .corporate--reverse{
+        display: flex;
+        flex-direction: row-reverse;
+     }
+    
+    /********************plan********************/ 
+    .popular__card{
+        position: relative;
+        top: -3rem;
+     }
+    /********************navbar********************/ 
+    .download-app{
+        display: block;
+    }
+    .nav__toggel{
+        display: none;
+    }
+    .nav__items{
+        flex-direction: row;
+        align-items: center;
+        width: auto;
+    }
+    .main-header .nav-header {
+        padding: 1rem 14rem;
+    }
+}
